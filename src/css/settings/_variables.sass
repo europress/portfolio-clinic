@@ -1,0 +1,19 @@
+@import ../mixins/_mix-breakpoints
+    
+$--header-heigth:		44px
+$--font-main:			'Comfortaa'
+$--font-second:			'inter'
+
+$--font-base-name: 		'Inter', sans-serif	
+$--font-header-name: 	'Comfortaa', sans-serif
+$--font-base-size: 		calc(100vw / 1440 * 16)
+$--font-regular: 		400
+$--font-medium:  		500
+$--font-semibold: 		600
+
+$--dim-def-width:  		#{$xlBreakpoint}px
+$--dim-min-width:  		320px
+$--dim-max-width:  		clamp($--dim-min-width, $--dim-def-width, 100%)
+$--dim-default-margin: 	0.75rem
+$--dim-default-gap:		calc($--dim-default-margin * 3)
+$--dim-default-radius:	calc($--dim-default-margin * 1.5)

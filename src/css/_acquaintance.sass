@@ -1,0 +1,31 @@
+@import ./mixins/_mix_blocks
+@import ./settings/_default
+@import ./settings/_colors
+	
+.acquaintance
+	@include box-flex-evenly(column, 100%, 100%)
+	// margin-top: calc($--header-heigth + $--dim-default-margin * 4)
+
+	& h1
+		margin-top: calc($--dim-default-margin * 4)
+	
+	& a
+		@include button-main()
+		
+.select_role
+	width: 100%
+	// margin-top: calc($--dim-default-margin * 2)
+	cursor: pointer
+
+	&__item
+		@include box-flex-center(row, 7.5rem, 100%)
+		gap: $--dim-default-gap / 2
+	
+	& input[type="radio"]
+		appearance: none
+		margin: 0
+		display: none
+
+		&:checked ~ h2, &:checked ~ img
+			color: $--th-light-link-active
+

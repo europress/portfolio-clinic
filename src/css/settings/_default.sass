@@ -1,0 +1,52 @@
+@import ../settings/_colors
+
+$--with:				414
+$--header-heigth:		44px
+$--font-main:			'Comfortaa'
+$--font-second:			'inter'
+
+$--font-base-name: 		'Inter', sans-serif	
+$--font-header-name: 	'Comfortaa', sans-serif
+$--font-base-size: 		calc(100vw / $--with * 16)
+$--font-regular: 		400
+$--font-medium:  		500
+$--font-semibold: 		600
+
+$--dim-def-width:  		#{$--with}px
+$--dim-min-width:  		320px
+$--dim-max-width:  		clamp($--dim-min-width, $--dim-def-width, 100%)
+$--dim-default-margin: 	0.75rem
+$--dim-default-gap:		calc($--dim-default-margin * 3)
+$--dim-default-radius:	calc($--dim-default-margin * 1.5)
+
+html, body
+	font-family: $--font-base-name
+	font-size: $--font-base-size
+
+h1
+	font-family: $--font-header-name
+	font-size: 1.75rem
+	font-weight: $--font-semibold
+
+h2
+	font-family: $--font-header-name
+	font-size: 1.125rem
+	font-weight: $--font-semibold
+
+h3
+	font-family: $--font-header-name
+	font-size: $--font-base-size
+	font-weight: $--font-medium 
+
+a
+	text-decoration: none
+	color: $--th-light-main
+
+a:link
+	color: $--th-light-main
+
+a:hover
+	color: $--th-light-link-hover
+
+a:active
+	color: $--th-light-link-active

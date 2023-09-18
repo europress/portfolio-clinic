@@ -1,0 +1,13 @@
+@import settings/_default
+@import settings/_colors
+@import mixins/_mix_blocks
+
+.header
+    position: absolute
+    z-index: 999
+    top: 0
+    @include box-flex-between(row, $--header-heigth, calc(100% - ($--dim-default-margin * 2)))
+
+.status_icon
+    @include box-flex-end(row, 100%) 
+    gap: 5px

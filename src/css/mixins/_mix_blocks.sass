@@ -1,0 +1,47 @@
+// flexes
+
+@mixin box-flex($direction: row, $height: auto, $width: auto)
+    display: flex
+    height: $height
+    width: $width
+    flex-direction: $direction
+    align-items: center
+    @content
+
+// center
+@mixin box-flex-center($direction: row, $height: auto, $width: auto)
+    @include box-flex($direction , $height , $width)
+        justify-content: center
+        @content
+
+// space-berween
+@mixin box-flex-between($direction: row, $height: auto, $width: auto)
+    @include box-flex($direction , $height , $width)
+        justify-content: space-between
+        @content
+
+// flex-start
+@mixin box-flex-start($direction: row, $height: auto, $width: auto)
+    @include box-flex($direction , $height , $width)
+        justify-content: flex-start
+        @content
+
+// flex-evenly
+@mixin box-flex-evenly($direction: row, $height: auto, $width: auto)
+    @include box-flex($direction , $height , $width)
+        justify-content: space-evenly
+        @content
+
+// flex-end
+@mixin box-flex-end($direction: row, $height: auto, $width: auto)
+    @include box-flex($direction , $height , $width)
+        justify-content: flex-end
+        @content
+
+
+// ------------------------ BUTTONS
+@mixin button-main()
+    background-color: $--th-light-button-bg
+    color: $--clr-grey-4
+    border-radius: $--dim-default-radius
+    padding: 15px 59px

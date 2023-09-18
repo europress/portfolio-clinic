@@ -1,0 +1,23 @@
+@import ./staff/fonts.sass
+@import ./staff/_reset
+@import ./staff/_normalize
+@import ./settings/_default
+@import ./mixins/_mix_blocks
+
+
+body
+	@include box-flex-between(column, 100vh, 100%)
+		min-height: 100vh
+
+.wrapper
+	position: relative
+	@include box-flex-start(column, 100%, 100%)
+	padding: 0 $--dim-default-margin * 2
+	background-color: $--th-light-background
+
+
+@import ./_header
+@import ./_loader
+@import ./_main
+@import ./_acquaintance
+@import ./_footer

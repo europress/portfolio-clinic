@@ -1,0 +1,31 @@
+@import ./mixins/_mix_blocks
+@import ./settings/_default
+@import ./settings/_colors
+
+
+.main
+    @include box-flex-start(column, 100%, 100%)
+    gap: $--dim-default-gap
+
+    &__image
+        position: relative
+        height: 70vh
+        width: calc(100% + $--dim-default-margin * 4)
+        background: url(../assets/img/main.webp) no-repeat
+        background-size: cover
+        border-radius: 0 0 2rem 2rem
+
+    &__logo
+        position: absolute
+        z-index: 2
+        top: 10vh
+        width: 100%
+
+    & h3
+        text-align: center
+
+    & a
+        @include button-main()
+
+@import ./_logo
+    

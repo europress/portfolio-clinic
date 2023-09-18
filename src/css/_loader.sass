@@ -1,0 +1,13 @@
+@import ./mixins/_mix_blocks
+@import ./settings/_colors
+
+.loader
+    @include box-flex-between(column, 100%, 100%)
+    color: $--clr-grey-2
+
+    &__logo
+        @include box-flex-center(column, 100%, 100%)
+        gap: 32px
+
+    & h2
+        height: 10vh

@@ -15,6 +15,18 @@
 	& section
 		@include box-flex-center(column, auto, 100%)
 		
+	& input[type="radio"]
+		appearance: none
+		margin: 0
+		display: none
+
+		&:checked ~ h2
+			color: $--th-light-link-active
+
+	& select
+		width: 60%
+		color: $--th-light-main
+
 .select_role
 	@include box-flex-center(column, auto, 100%)
 	gap: $--dim-default-gap
@@ -47,12 +59,5 @@
 	&__item:has(> input[type="radio"][value="doctor"]:checked)::before
 		background-image: url('../assets/img/svgIcons/icon_doctor_selected.svg')
 	
-	& input[type="radio"]
-		appearance: none
-		margin: 0
-		display: none
-
-		&:checked ~ h2
-			color: $--th-light-link-active
 
 

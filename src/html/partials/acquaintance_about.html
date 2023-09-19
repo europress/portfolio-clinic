@@ -1,0 +1,46 @@
+
+<div class="acquaintance">
+    
+    <section>
+        <div class="acquaintance__logo logo">
+            <img src="../assets/img/logo_medicine_2.svg" alt="logo">
+        </div>
+
+        <h1>Расскажите о себе</h1>
+
+        <div class="select_gender">
+            <h2>Ваш пол</h2>
+            <label class="select_gender__item">
+                <input name="gender" type="radio" value="male" checked>
+                <h2>Мужчина</h2>
+            </label>
+            <label class="select_gender__item">
+                <input name="gender" type="radio" value="female">
+                <h2>Женщина</h2>
+            </label>
+        </div>
+
+        <div class="select_birthday">
+            <h2>Дата рождения</h2>
+            <label class="select_birthday__item">
+                <h2>День:</h2>
+                <input name="day" type="text" placeholder="23">
+            </label>
+            <label class="select_birthday__item">
+                <h2>Месяц:</h2>
+                <input name="month" type="text" placeholder="11">
+            </label>
+            <label class="select_birthday__item">
+                <h2>Год:</h2>
+                <input name="year" type="text" placeholder="2003">
+            </label>
+        </div>
+
+        <select name="countries">
+            <label>Ваше местоположение</label>
+            @@loop("_loop_countries.html", "../assets/data/countries.json")
+        </select>
+    </section>
+
+    <a href="../acquaintance.html">Продолжить </a>
+</div>   

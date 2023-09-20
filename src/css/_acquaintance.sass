@@ -12,11 +12,20 @@
 	& h2
 		line-height: 3rem
 	
-	& a
+	& a.button
 		@include button-main()
+
+	a.signup
+		color: $--th-light-button-bg
+		text-decoration: underline $--th-light-button-bg
+
+		&:hover
+			color: $--th-light-link-hover
+			text-decoration: underline $--th-light-link-hover
 
 	& section
 		@include box-flex-start(column, auto, 100%)
+		gap: $--dim-default-gap
 		
 	& input[type="radio"]
 		display: none
@@ -125,8 +134,25 @@
 
 		& input[type="text"]
 			width: calc(100vw / 4)
-			padding: 0.375rem 0.75rem
-			line-height: 2rem
-			color: $--th-light-main
-			border: 0.0625rem solid $--th-light-main
 			border-radius: calc($--dim-default-radius / 2)
+
+.select_auth
+	@include box-flex-evenly(column, auto, 70vw)
+		gap: $--dim-default-gap
+
+	&__item
+		@include box-flex-center(column, auto, 100%)
+		align-items: flex-start
+
+		& > h3
+			color: $--th-light-main-noactive
+			align-self: flex-start
+			padding: 0.375rem 0.75rem
+
+		& input[type="text"]
+			width: calc(70vw)
+			border-radius: calc($--dim-default-radius / 2)
+
+
+
+

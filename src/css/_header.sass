@@ -7,6 +7,17 @@
     top: 0
     @include box-flex-between(row, $--header-heigth, calc(100% - ($--dim-default-margin * 2)))
 
+    // turn off header on mobile devices
+    @media (pointer: coarse)
+        display: none
+
+    // @media (pointer: fine), (pointer: none)
+    //     display: block
+
+
+    // @media (pointer: fine) and (any-pointer: coarse)
+    //     display: block
+
 .status_icon
     @include box-flex-end(row, 100%) 
     gap: 5px
